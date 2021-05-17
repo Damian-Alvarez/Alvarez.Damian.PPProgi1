@@ -8,7 +8,7 @@ typedef struct{
     int recu;
     int muertos;
 }ePais;
-
+void invertirCadena(char cadena[],int i,int j,int largo);
 void actualizarRecuperados(ePais paises, int rec);
 int main()
 {
@@ -26,4 +26,15 @@ void actualizarRecuperados(ePais paises, int rec)
     paises.recu += rec;
 
     printf("El pais: %s\n Recuperados: %d\n Infectados: %d\n", paises.nombre, paises.recu,paises.infec);
+}
+void invertirCadena(char cadena[],int i,int j,int largo){
+    char auxCad[20];
+	largo = strlen(cadena) ;
+	for (i=largo; i>=0;i--){
+		for (j=0; j<largo ;j++) {
+
+			auxCad [j] = cadena[i];
+
+		}
+	}
 }
